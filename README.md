@@ -1,1 +1,1 @@
-# LIRI-Bot
+# Liri-node-app
