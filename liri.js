@@ -20,10 +20,6 @@ var keys = require("./keys.js");
 var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
 
-//OMD AND BANDS IN TOWN'S API'S
-var omdb = keys.omdb;
-var bandsintown = keys.bandsintown;
-
 // TAKE USER COMMAND AND INPUT
 var liriArgument = process.argv[2];
 var liriSubject = process.argv.slice(3).join(" ");
@@ -66,7 +62,7 @@ function concertThis(subject) {
 
   axios.get(queryURL).then(function(response) {
     if (response.status == 200) {
-      let data = response.data[0];
+      var data = response.data[0];
       console.log(
         "Venue name: " +
           data.venue.name +
